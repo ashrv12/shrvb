@@ -50,7 +50,7 @@
 	}
 
 	.one:active {
-		transition: opacity transform 3000ms ease-in;
+		transition: opacity 1500ms ease-out, transform 1500ms ease-in;
 		opacity: 0;
 		transform: scale(10) translateY(50px);
 	}
