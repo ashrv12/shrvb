@@ -50,4 +50,9 @@
         width: 80%;
         height: 22.5%;
     }
+
+    .one:active {
+        transition: 1000ms ease-out;
+        transform: scale(10) translateY(50px);
+    }
 </style>
