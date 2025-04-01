@@ -1,5 +1,6 @@
 <script>
     import FlexboxFour from "../components/home/Flexbox-four.svelte";
+	import FlexboxOne from "../components/home/Flexbox-one.svelte";
     import FlexboxThree from "../components/home/Flexbox-three.svelte";
     import FlexboxTwo from "../components/home/Flexbox-two.svelte";
 
@@ -12,7 +13,7 @@
 <div class="outmost-box">
     <div class="main-flex">
         <!-- First main box mobile -->
-        <div class="flexbox one"></div>
+        <FlexboxOne />
 
         <!-- Second main box mobile -->
         <FlexboxTwo />
@@ -42,17 +43,5 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-    }
-
-    .flexbox {
-        border: 1px #FFF solid;
-        border-radius: 20px;
-        width: 80%;
-        height: 22.5%;
-    }
-
-    .one:active {
-        transition: 1000ms ease-out;
-        transform: scale(10) translateY(50px);
     }
 </style>
