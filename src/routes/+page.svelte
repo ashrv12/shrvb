@@ -1,3 +1,9 @@
+<script>
+    import FlexboxFour from "../components/home/Flexbox-four.svelte";
+    import FlexboxThree from "../components/home/Flexbox-three.svelte";
+    import FlexboxTwo from "../components/home/Flexbox-two.svelte";
+
+</script>
 <svelte:head>
 	<title>ShrvB</title>
 	<meta name="description" content="Home page" />
@@ -6,27 +12,17 @@
 <div class="outmost-box">
     <div class="main-flex">
         <!-- First main box mobile -->
-        <div class="flexbox one">About</div>
+        <div class="flexbox one"></div>
 
         <!-- Second main box mobile -->
-        <div class="flexbox two">
-            <div class="box-two-first">
-
-            </div>
-
-            <div class="box-two-second">
-
-            </div>
-        </div>
+        <FlexboxTwo />
 
         <!-- Third main box mobile -->
-        <div class="flexbox three">hi</div>
+        <FlexboxThree />
 
         <!-- Fourth main box mobile -->
-        <div class="flexbox four">hi</div>
+        <FlexboxFour />
 
-        <!-- Fifth main box mobile -->
-        <div class="flexbox five">hi</div>
     </div>
 </div>
 
@@ -42,7 +38,7 @@
     .main-flex {
         display: flex;
         width: 100%;
-        height: 85%;
+        height: 70%;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -50,7 +46,8 @@
 
     .flexbox {
         border: 1px #FFF solid;
+        border-radius: 20px;
         width: 80%;
-        height: 16%;
+        height: 22.5%;
     }
 </style>
