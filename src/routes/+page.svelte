@@ -11,7 +11,7 @@
 </svelte:head>
 
 <div class="outmost-box">
-    <div class="main-flex">
+    <div class="main-grid">
         <!-- First main box mobile -->
         <FlexboxOne />
 
@@ -36,12 +36,13 @@
         width: 100vw;
     }
 
-    .main-flex {
-        display: flex;
-        width: 100%;
+    .main-grid {
+        display: grid;
+        width: 90%;
         height: 70%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 1em;
+        border: 1px red solid;
     }
 </style>

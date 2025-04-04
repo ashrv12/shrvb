@@ -13,7 +13,7 @@
 </script>
 
 <button onclick={navigate} class="flexbox one">
-	<h1 class="work-title">Work and expertise</h1>
+	<h1 class="work-title">Test and test</h1>
 </button>
 
 {#if visible}
@@ -45,13 +45,22 @@
 		background-color: transparent;
 		color: #fff;
 		border-radius: 20px;
-		width: 80%;
-		height: 22.5%;
+		position: relative;
+		grid-row: 1 / 1 span;
+		grid-column: 1 / 5 span;
 	}
 
 	.one:active {
 		transition: opacity 1500ms ease-out, transform 1500ms ease-in;
 		opacity: 0;
 		transform: scale(10) translateY(50px);
+	}
+
+	@keyframes autorun {
+		from {
+			transform: translateY(100%);
+		} to {
+			transform: translateY(-100%);
+		}
 	}
 </style>
