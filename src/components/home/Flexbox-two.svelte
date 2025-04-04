@@ -1,34 +1,24 @@
 
+<div class="box-1">
 
-<div class="main">
-    <div class="box-1">
+</div>
 
-    </div>
+<div class="box-2">
 
-    <div class="box-2">
-
-    </div>
 </div>
 
 <style>
-    .main {
-        width: 80%;
-        height: 22.5%;
-        display: flex;
-        justify-content: space-between;
-    }
-
     .box-1 {
+        grid-row: 2 / 1 span;
+        grid-column: 1 / 3 span;
         border: 1px #FFF solid;
-        height: 100%;
-        width: 55%;
         border-radius: 20px;
     }
-
+    
     .box-2 {
+        grid-row: 2 / 1 span;
+        grid-column: 4 / 2 span;
         border: 1px #FFF solid;
-        height: 100%;
-        width: 40%;
         border-radius: 20px;
     }
 </style>
