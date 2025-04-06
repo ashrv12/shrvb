@@ -43,6 +43,5 @@
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: 1em;
-        border: 1px red solid;
     }
 </style>

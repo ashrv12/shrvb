@@ -13,8 +13,12 @@
 </script>
 
 <button onclick={navigate} class="flexbox one">
-	<h1 class="work-title">Test and test</h1>
+    <img class="kubelogo" src="kubernetes.svg" alt="Kubernetes Logo" />
+	<h1 class="work-title">Kubernetes</h1>
+    <div class="fuzzy"></div>
 </button>
+
+
 
 {#if visible}
 	<div
@@ -27,6 +31,16 @@
 {/if}
 
 <style>
+    .work-title{
+        color: rgb(12, 12, 12);
+        font-size: 3em;
+        font-weight: 900;
+    }
+
+    h1 {
+        font-family: 'Ubuntu Mono';
+    }
+    
 	.blur-div {
 		position: absolute;
 		background-color: #fff;
@@ -36,13 +50,29 @@
 		left: 0;
 	}
 
-	h1 {
-		font-family: 'Ubuntu Mono';
-	}
+    .fuzzy {
+        position: absolute;
+        inset: -200%;
+		opacity: 3%;
+		z-index: 20;
+		background-image: url("static.avif");
+		animation: shift 0.5s linear infinite both;
+		pointer-events: none;
+    }
 
 	.flexbox {
-		border: 1px #fff solid;
-		background-color: transparent;
+        /* Glassmorphism effects */
+        border: 1px solid rgba(255,255,255,0.5);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+		background: rgba(255, 255, 255, 0.1);
+        /* Normal css */
+
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
 		color: #fff;
 		border-radius: 20px;
 		position: relative;
@@ -50,17 +80,43 @@
 		grid-column: 1 / 5 span;
 	}
 
+    .kubelogo {
+        height: 5em;
+        width: auto;
+        -webkit-animation: rotating 2s linear infinite;
+        -moz-animation: rotating 2s linear infinite;
+        -ms-animation: rotating 2s linear infinite;
+        -o-animation: rotating 2s linear infinite;
+        animation: rotating 10s linear infinite;
+    }
+
 	.one:active {
-		transition: opacity 1500ms ease-out, transform 1500ms ease-in;
+		transition: opacity 1500ms, transform 1500ms;
 		opacity: 0;
 		transform: scale(10) translateY(50px);
 	}
 
-	@keyframes autorun {
+	@keyframes rotating {
 		from {
-			transform: translateY(100%);
+            -ms-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+			transform: rotate(0deg);
 		} to {
-			transform: translateY(-100%);
+            -ms-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            -o-transform: rotate(360deg);   
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes shift {
+		0% {
+			transform: translateX(10%) translateY(10%);
+		} 100% {
+			transform: translateX(-10%) translateY(-10%);
 		}
 	}
 </style>

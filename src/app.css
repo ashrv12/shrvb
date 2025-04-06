@@ -7,7 +7,7 @@
 	--font-mono: 'Ubuntu Mono', monospace;
 	--color-text: rgb(243, 243, 243);
     --width: 100vw;
-    --height: 100vh
+    --height: 100vh;
 	font-family: var(--font-body);
 	color: var(--color-text);
 }
@@ -16,6 +16,7 @@ body {
     margin: 0;
     width: var(--width);
     height: var(--height);
-    background-color: #050203;
-    background: linear-gradient(#151515 0%, #050203 100%);
+    background-image: url("mainBG.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
 }
